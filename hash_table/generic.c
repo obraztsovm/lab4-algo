@@ -122,7 +122,7 @@ void setItemHashTable(HashTable *table, void *key, void *data, HashFunc hash, Cm
     if (h < 0) h = -h;
     size_t hash_val = (size_t)h;
 
-    size_t index = hash_val % table->capacity;
+    size_t index = hash_val % table->capacity; // по факту по модуль
     size_t first_deleted = table->capacity;
     size_t i = 0;
 
